@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(layout="wide")
+
+st.title('👗 My Style Manager')
 
 def set_bg_hack_url():
     '''
@@ -28,35 +31,67 @@ def set_bg_hack_url():
 
 # set_bg_hack_url()
 
-
-st.markdown(
-    f'<h1 style="color:#ffffff;font-size:30px;">{"👕사자동산의 Final Project👕"}</h1>', unsafe_allow_html=True)
-
-# st.set_page_config(
-#     page_title="PassionKing",
-#     page_icon="👕",
-# )
-
-st.sidebar.success("Select a page above.")
+# st.sidebar.success("Select a page above.") 페이지 골라주세요 부분
 
 st.markdown(
     """
-    멋쟁이 사자처럼 AI School 6기 Final-Project **👖👖👖 PassionKing 👖👖👖**의 파이널 프로젝트 결과 홈페이지입니다.
-    ## 1.  프로젝트 개요
-    ### 1-1 주제: 👒이미지 분류 및 추천 시스템 활용 코디 추천 모델👒
-    ### 1-2 주제 선정의 배경 및 이유
-        - 이른 아침 눈을 뜨고 나갈 준비를 하면서 어떤 옷을 입지?🤔고민하시는 당신! 
-        - 이런 당신을 위한 쉽고 간편한 코디 추천 모델을 추천해드립니다!
-        - 오늘 입고 나갈 상의 사진을 찍어서 올리면 딱 맞는 코디를 추천해드립니다.
-    ### 1-3. 목적
-        - 패션 코디를 보고 옷을 잘 입고 싶으나 자신이 어떤 종류의 옷을 코디 할지 잘 모르는 유저들에게 고민의 시간을 줄여주고 자기 만족감을 올릴 수 있는 데에 목적을 가지고 있다.
-    
-    ## 2.   데이터셋
-        - 무신사 의류 크롤링
-        - AI Hub - 패션 상품 및 착용 이미지
-        (https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=78)
+    Welcome! This page is Likelion Final-Project of passionking
+    """
+)
 
-    ## 3.    가설 설정(예상 결과물)
-        - 유저들이 소지하고 있는 옷 사진을 찍어서 Input으로 넣으면 해당 옷이 반영된 코디 사진들을 보여준다. 나아가서 코디 사진에 등장한 잘 어울리는 의상을 구매할 수 있는 쇼핑몰 링크를 추천해준다.
+st.subheader("Nice to meet You XD")
+
+
+
+selected_item = st.radio("여러분이 가진 고민은 무엇인가요?", (
+    "패션에 관심은 많은데 스타일링이 어려워요",
+    "바쁜 아침에 고민하지 않고 빨리 준비하고 싶어요", 
+    "집에 사놓고 어떻게 입어야 할 지 모르겠는 옷들이 많아요"
+    )
+    )
+	
+if selected_item == "패션에 관심은 많은데 스타일링이 어려워요":
+    st.write("**마스매가 예쁜 코디 사진 추천으로 도와줄게요!**")
+elif selected_item == "바쁜 아침에 고민하지 않고 빨리 준비하고 싶어요":
+    st.write("**마스매와 함께라면 빠른 출근 준비 완료!**")
+elif selected_item == "집에 사놓고 어떻게 입어야 할 지 모르겠는 옷들이 많아요":
+    st.write("**마스매로 옷장 속 장롱템의 재발견까지!**")
+
+st.markdown(
+"""
+### What is My Style Manager?
+    마이스타일매니저에서는 직접 촬영한 상품 이미지(상의, 하의, 신발, 모자 등)를 올리면    
+    해당 상품에 어울리는 코디를 자동으로 추천해줍니다. 매일 아침 등교, 출근 준비 시간에      
+    마스매를 통해 고민없는 빠르고 예쁜 스타일링 추천을 경험해보세요!
 """
 )
+
+
+st.subheader("How To Use?")
+
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown(
+        """
+        #### Step1
+        """
+    )
+    st.image("images/step1.jpg")
+
+with col2:
+    st.markdown(
+        """
+        #### Step2
+        """
+    )
+    st.image("images/Step2.jpg")
+
+with col3:
+    st.markdown(
+        """
+        #### Step3
+        """
+    )
+    st.image("images/Step3.jpg")

@@ -3,10 +3,10 @@ import streamlit as st
 from PIL import Image
 import cv2
 
-hdf = h5py.File("model_dataset.h5", 'r')
+hdf = h5py.File("model_dataset0818.h5", 'r')
 array = hdf['1008_1008_720_B_B017_B017_000.jpg'][:]
 img = cv2.cvtColor(array, cv2.COLOR_BGR2RGB)
-array2 = cv2.resize(img, (0, 0), fx=3, fy=3,
+array2 = cv2.resize(img, (0, 0), fx=1.2, fy=1.2,
                     interpolation=cv2.INTER_LANCZOS4)
 img = Image.fromarray(array2)
 

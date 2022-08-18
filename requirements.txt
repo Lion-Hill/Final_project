@@ -12,3 +12,4 @@ utility
 opencv-python-headless
 h5py
 rembg
+tensorflow
