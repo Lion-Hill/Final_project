@@ -7,7 +7,6 @@ seaborn
 matplotlib
 koreanize_matplotlib
 scikit-learn
-scipy==1.7.1
 utility
 opencv-python-headless
 h5py
