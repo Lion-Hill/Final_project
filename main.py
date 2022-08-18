@@ -26,8 +26,8 @@ def set_bg_hack_url():
         unsafe_allow_html=True
     )
 
-
 # set_bg_hack_url()
+
 
 st.markdown(
     f'<h1 style="color:#ffffff;font-size:30px;">{"👕사자동산의 Final Project👕"}</h1>', unsafe_allow_html=True)
