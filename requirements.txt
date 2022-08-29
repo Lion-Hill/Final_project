@@ -1,0 +1,14 @@
+pandas
+numpy
+streamlit
+finance-datareader
+plotly
+seaborn
+matplotlib
+koreanize_matplotlib
+scikit-learn
+utility
+opencv-python-headless
+h5py
+rembg
+tensorflow
